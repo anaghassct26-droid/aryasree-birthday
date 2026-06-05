@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aryasree</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:#FFF8F3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:#444;
+}
+
+.container{
+    background:white;
+    width:90%;
+    max-width:750px;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+h1{
+    color:#ff8fa3;
+}
+
+button{
+    background:#ffb3c1;
+    border:none;
+    padding:12px 24px;
+    border-radius:15px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.hidden{
+    display:none;
+}
+
+.section{
+    margin-top:25px;
+}
+
+#girl img{
+    width:220px;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+#girl{
+    animation:enter 2s ease-out;
+}
+
+@keyframes enter{
+    from{
+        transform:translateX(-300px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+#cake{
+    font-size:70px;
+    margin-top:10px;
+}
+
+#candles{
+    font-size:20px;
+    margin-top:5px;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+#message{
+    margin-top:20px;
+    font-size:18px;
+}
+
+ul{
+    text-align:left;
+    display:inline-block;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div id="page1">
+
+    <h1>🎂 Happy 22nd Birthday, Aryasree</h1>
+
+    <p>A small software update has been detected.</p>
+
+    <button onclick="showMessage()">
+        Install Update
+    </button>
+
+</div>
+
+<div id="page2" class="hidden">
+
+    <h1>✨ Aryasree v22.0 Successfully Installed</h1>
+
+    <div class="section">
+
+        <h3>System Information</h3>
+
+        <p><strong>Name:</strong> Aryasree</p>
+        <p><strong>Version:</strong> 22.0</p>
+        <p><strong>Status:</strong> Birthday Girl 🎉</p>
+
+    </div>
+
+    <div class="section">
+
+        <h3>Features Included</h3>
+
+        <ul>
+            <li>✅ Loud laugh</li>
+            <li>✅ Premium yapping package</li>
+            <li>✅ Excellent listener</li>
+            <li>✅ Refuses to change herself for anyone</li>
+            <li>✅ Handmade gifts is her love language</li>
+            <li>✅ Talented and actually reliable</li>
+        </ul>
+
+    </div>
+
+    <div class="section">
+
+        <h3>Known Bugs</h3>
+
+        <ul>
+            <li>⚠️ Claims she will be online when she's back at home</li>
+            <li>⚠️ Sometimes conspires ideas about un-aliving Anagha</li>   
+            <li>⚠️ May cause uncontrollable laughter</li>
+        </ul>
+
+    </div>
+
+    <div class="section">
+
+        <h3>Friendship Status</h3>
+
+        <p>💛 Active</p>
+        <p>📅 Duration: 4 Years</p>
+        <p>🔄 Renewal: Automatic</p>
+
+    </div>
+
+    <div class="section">
+
+        <h3>Birthday Cake Delivery Service</h3>
+
+        <div id="girl">
+    <img src="girl.png" alt="Birthday Girl"> </div>
+        <div id="cake">
+            🎂
+        </div>
+
+        <div id="candles">
+            🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️
+            <br>
+            🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️🕯️
+            <br>
+            🕯️🕯️
+        </div>
+
+        <p id="message">
+
+         Hi Aryasree! 💛
+
+         <br><br>
+
+         I heard you're turning 22 today.
+
+         <br><br>
+
+         So I brought you a birthday cake!
+
+         <br><br>
+
+         But first...
+
+         <br><br>
+
+         You have to blow out the candles. 🎂
+
+</p>
+
+<button type="button" id="cakeButton" onclick="blowCandles()">
+    Blow Out Candles 🕯️
+</button>
+
+    <div class="section">
+
+        <h3>Special Message</h3>
+
+        <p>
+            Thank you for the laughs, the conversations,
+            the memories,
+            and for making these four years
+            much better than they would've been without you.
+        </p>
+
+        <p>
+            May this friendship last forever...
+        </p>
+
+        <p>
+            ...or at least until a jackfruit falls from a mango tree. 🌳
+        </p>
+
+    </div>
+
+    <button type="button" onclick="finalMessage()">
+    💛 Accept Birthday Wishes
+    </button>
+
+</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+
+    document.getElementById("page1").classList.add("hidden");
+    document.getElementById("page2").classList.remove("hidden");
+
+}
+
+function blowCandles(){
+
+    document.getElementById("candles").innerHTML = "";
+
+    document.getElementById("message").innerHTML =
+    "🎉 YAYYYY! Happy Birthday Aryasree! 🎉<br><br>Time to cut the cake!";
+
+    document.getElementById("cakeButton").innerHTML =
+    "Cut Cake 🔪🎂";
+
+    document.getElementById("cakeButton").setAttribute(
+        "onclick",
+        "cutCake()"
+    );
+
+}
+function cutCake(){
+
+    document.getElementById("message").innerHTML =
+    "🍰 First slice successfully reserved for Aryasree.<br><br>👧 Here you go! Birthday girls always get the first piece.";
+
+    document.getElementById("cake").innerHTML =
+    "🎂 ✂️";
+
+    document.getElementById("cakeButton").innerHTML =
+    "Take Your Slice 🍰";
+
+    document.getElementById("cakeButton").setAttribute(
+        "onclick",
+        "giveSlice()"
+    );
+
+}
+function giveSlice(){
+
+    document.getElementById("message").innerHTML =
+    "👧 I hope you liked it!<br><br>There's still some cake left...";
+
+    document.getElementById("cakeButton").innerHTML =
+    "Let Her Have The Rest 😋";
+
+    document.getElementById("cakeButton").setAttribute(
+    "onclick",
+    "eatCake()"
+);
+    document.getElementById("cake").innerHTML =
+"🎂<br><small>(one slice taken)</small>";
+}
+
+function eatCake(){
+
+    document.getElementById("message").innerHTML =
+    "👧 nom nom nom...";
+
+    setTimeout(()=>{
+        document.getElementById("cake").innerHTML = "🎂";
+    },500);
+
+    setTimeout(()=>{
+        document.getElementById("cake").innerHTML = "🍰";
+    },1500);
+
+    setTimeout(()=>{
+        document.getElementById("cake").innerHTML = "🧁";
+    },2500);
+
+    setTimeout(()=>{
+        document.getElementById("cake").innerHTML = "🍪";
+    },3500);
+
+    setTimeout(()=>{
+        document.getElementById("cake").innerHTML = "";
+    },4500);
+
+    setTimeout(()=>{
+
+        document.getElementById("message").innerHTML =
+        "👧 Cake Status: Finished ✅<br><br>💛 Birthday Wishes Delivered.<br>💛 Friendship Contract Active.<br><br>Expiry Date: When a jackfruit falls from a mango tree.";
+
+        document.getElementById("cakeButton").style.display =
+        "none";
+
+    },5000);
+
+}
+function finalMessage(){
+
+    alert(
+        "🎉 Happy 22nd Birthday Aryasree! 🎉\n\nMay your year be filled with laughter, happiness, and enough chaos to keep life interesting. 💛"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
